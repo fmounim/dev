@@ -116,12 +116,20 @@ Let's go!
         </java>
     </target>
 
-	<!-- ================================= 
+    <!-- ================================= 
           target: generate-src
             'Generates' the class source. It actually just echo a simple java 
             source code to a file. In real life this file would already be
             present on your file system, and this target wouldn't be necessary.
          ================================= -->
+
+    <!-- ================================= 
+          target: report             
+         ================================= -->
+
+	<target name="report" depends="go">
+		<ivy:report todir="report" />
+	</target>
 
     <!-- ================================= 
           target: clean              
